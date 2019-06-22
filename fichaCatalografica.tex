@@ -1,0 +1,59 @@
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%   Arquivo     : fichaCatalografica.tex
+%   Tipo        : TeX
+%   Conteúdo    : Arquivo contendo a ficha catalográfica do Trabalho da EMC/UFG
+%   Data        : 30 de abril de 2012
+%   Copyright   : Marcelo Stehling de Castro
+%   E-mail      : mcastro@ufg.br
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{fichacatalografica}
+	\sffamily
+%	\vspace*{\fill}					% Posição vertical
+	\begin{center}					% Minipage Centralizado
+	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
+	\small
+	\imprimirautor / \imprimirtitulo \par
+	%Sobrenome, Nome do autor
+	
+	\imprimirtipotrabalho~--~\imprimirinstituicao,\imprimirlocal,\imprimirdata
+	\newline
+	\vspace{0.5cm}
+	\hspace{0.5cm} \thelastpage p. : il. (algumas color.) ; 30 cm.
+	\newline
+    \hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador
+	\newline
+		1. Desenvolvimento de Sistema \par
+		2. Consumo Energético \par
+		3. Monitoramento de rede energética \par
+		I. {\imprimirinstituicao} \par
+		II. \imprimirtitulo
+	\end{minipage}}
+	\end{center}
+\end{fichacatalografica}
+% ---
+\vspace*{\fill}
+
+\begin{minipage}{.9\textwidth}
+        \textbf{CESSÃO DE DIREITOS}
+	    \vspace{0.5cm}
+	    
+        AUTOR: Rafael Ratacheski de Sousa Raulino
+        TÍTULO DA MONOGRAFIA: {\imprimirtitulo} 
+        GRAU / ANO: Bacharel / {\imprimirdata} 
+        
+        O autor reserva outros direitos de publicação e nenhuma parte desta monografia pode ser reproduzida sem a autorização por escrito do autor.
+        
+	    \vspace{0.5cm}
+        \begin{center}
+            \begin{minipage}{.45\textwidth}
+            \begin{center}
+                {\imprimirautor}
+            \end{center}
+            \footnotesize{Endereço: Rua 16, Quadra C, Lote 4, Casa 1, Setor Morais, Goiânia - GO.} 
+            \footnotesize{CEP: 74620-415.} 
+            \footnotesize{Tel.: +55 62 99246-3302} 
+            \footnotesize{E-mail: rafaelratacheski@gmail.com}
+            \end{minipage}
+        \end{center}
+\end{minipage}

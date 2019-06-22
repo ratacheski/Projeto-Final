@@ -1,0 +1,66 @@
+\chapter[Introdução ao Problema]{Introdução ao Problema}
+
+Nesta introdução serão apresentados os objetivos do trabalho, a definição de alguns conceitos que se fazem necessários para que este se situe e para que a motivação e desafios do mesmo sejam esclarecidos, e por fim a estrutura da monografia.
+
+\section{Objetivos}
+
+Os objetivos principais deste trabalho são:
+
+\begin{itemize}
+    \item desenvolver um sistema para comunicação com os medidores energéticos instalados na universidade;
+    \item desenvolver um modelo de dados para armazenamento dos dados coletados por esses medidores, bem como os dados da própria concessionária de energia;
+    \item desenvolver um sistema para leitura, interpretação e armazenamento dos dados contidos nas faturas energéticas geradas pela concessionária;
+    \item implantar o sistema e disponibilizá-lo para o uso da instituição;
+\end{itemize}
+
+A motivação desse trabalho surgiu no desenvolvimento inicial de um projeto durante estágio na instituição, onde o escopo inicial do sistema de interpretação dos dados das faturas energéticas foi definido, e onde posteriormente foi inserido a parte de comunicação com os medidores e a criação de uma interface para apreciação dos dados durante o desenvolvimento do \textbf{Projeto de Final de Curso 1} do mesmo autor descrito e disponível no apêndice \ref{a:PFC1}.
+
+\section{Conceitos}
+
+A seguir, serão abordados alguns dos conceitos de alto nível utilizados ao longo do trabalho, estes conceitos possibilitarão um entendimento inicial das técnicas escolhidas para a solução do problema inicial, bem como possibilitarão uma aproximação maior do leitor ao tema.
+
+\newpage
+\subsection{Protocolo Modbus}
+
+O protocolo Modbus é uma estrutura de mensagem aberta desenvolvida pela Modicon na década de 70, utilizada para comunicação entre  dispositivos mestre-escravo / cliente-servidor. \cite{modicon1996}
+
+Após a compra da Modicon pela Schneider os direitos sobre o protocolo foram liberados pela Organização Modbus. Muitos equipamentos industriais utilizam o Modbus como protocolo de comunicação, e graças às suas características, este protocolo também tem sido utilizado em uma vasta gama de aplicações como:
+
+\begin{itemize}
+\item  Instrumentos e equipamentos de laboratório;
+\item  Automação residencial;
+\item  Automação de navios;
+\end{itemize}
+
+\subsection{Desenvolvimento Ágil}
+
+A partir de 1990 as definições desenvolvimento de software evoluíram como parte de uma reação contra métodos desgastantes de desenvolvimento, caracterizados por uma densa regulamentação. 
+
+O processo originou-se da visão de que o modelo em cascata era burocrático e lento, uma forma contrária com a qual engenheiros de software realizavam seus trabalhos.
+Inicialmente, foram desenvolvidas técnicas para para agilizar o desenvolvimento e a esse conjunto de técnicas foi dado o nome de métodos leves. 
+
+Em 2001, membros da comunidade se reuniram em \textit{Snowbird} e publicaram um manifesto para reunir os princípios e práticas desta metodologia de desenvolvimento, dando o nome de Manifesto Ágil \cite{beck2001manifesto}. Posteriormente, formou-se a \textit{Agile Alliance}, uma organização sem fins lucrativos que ajuda na divulgação do desenvolvimento ágil.
+
+\newpage
+\subsection{Banco de Dados}
+
+\citeonline{korth1994} define um banco de dados como sendo \say{uma coleção de dados inter-relacionados, representando informações sobre um domínio específico}, ou seja, quando houver a possibilidade de se agrupar dados que se relacionam e fazem parte de um mesmo universo de um assunto, pode-se dizer que tem-se um banco de dados.
+
+Já um sistema de gerenciamento de banco de dados (SGBD) é um \textit{software} que possibilita o usuário de fazer a manipulação e visualização, das informações gravadas no banco de dados. O SGBD adotado para o desenvolvimento deste projeto foi o PostgreSQL.
+
+Fazendo o uso de um SGBD para acessar as informações do banco de dados, tem-se então o conceito de sistema de banco de dados como o conjunto de quatro componentes básicos: dados, hardware, software e usuários. \cite{date2004} conceituou que \say{sistema de bancos de dados pode ser considerado como uma sala de arquivos eletrônica}.
+
+
+\section{Estrutura do trabalho}
+
+Tendo como objetivo uma apresentação do cenário energético e econômico brasileiro atual, este trabalho faz um levantamento de dados de pesquisa e valores de consumos da instituição analizada no capítulo \ref{c:contextualizando_o_cenario_energetico_brasileiro}.
+
+Logo após, um aprofundamento nos processos gerais de comunicação dos medidores através do protocolo Modbus e no processo de desenvolvimento de um sistema web, é feito nos capítulos \ref{c:a_comunicacao_modbus} e \ref{c:o_desenvolvimento_de_aplicacoes_web}.
+
+Tendo a base conceitual das etapas, técnicas e problemas bem definida e contextualizada, a infraestrutura que fornecerá os dados para esse sistema e seus devidos meios de comunicação serão expostos no capítulo \ref{c:infraestrutura_da_rede_de_medidores}.
+A exposição da modelagem inicial do banco que fará o armazenamento dos medidores e suas medições, das unidades consumidoras e suas devidas faturas energéticas, bem como todas as tabelas auxiliares para o funcionamento do sistema estarão declarados no capítulo \ref{c:estrutura_de_banco_de_dados}.
+
+Expostos os modelos de como estarão distribuídas e armazenadas as informações serão explanados os subsistemas que irão compor a estrutura do Sistema Interpretador de Dados Energéticos (SIDE), sendo o sistema sincronizador de dados de medição descrito no capítulo \ref{c:sistema_sincronizador_de_dados}, o sistema interpretador de faturas descrito no capítulo \ref{c:sistema_interpretador_de_faturas}, e o sistema de interface com o usuário que fará a utilização de todos os outros subsistemas apresentado no capítulo \ref{c:interface_de_usuario}.
+
+Por fim, os resultados encontrados e confirmados ao longo do projeto são dispostos nos capítulos \ref{c:obtencao_dos_dados_dos_sensores}, \ref{c:obtencao_dos_dados_das_faturas} e \ref{c:resultado_da_interface_do_usuario}, as conclusões deste apresentadas no capítulo \ref{c:conclusoes} e uma análise das possibilidades e trabalhos futuros na área no capítulo \ref{c:trabalhos_futuros}.
+

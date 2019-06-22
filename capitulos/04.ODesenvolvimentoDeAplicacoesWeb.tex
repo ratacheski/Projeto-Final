@@ -1,0 +1,81 @@
+\chapter{O Desenvolvimento de Aplicações \textit{Web}}
+\label{c:o_desenvolvimento_de_aplicacoes_web}
+% ---
+\section{Levantamento de Requisitos}
+
+O levantamento de requisitos é uma importante etapa para a concepção de um projeto no âmbito da engenharia de requisitos, onde a pessoa responsável pela análise deve fazer o uso de todas informações disponíveis que definirão os requisitos para poder identificar as funcionalidades que o sistema deverá ter \cite{wazlawick2013engenharia}.
+
+\cite{bezerra2016principios} define para o levantamento de requisitos os seguintes meios de obtenção 
+\begin{itemize}
+    \item questionários, tendo por objetivo a descoberta de problemas a serem abordados, identificar os principais procedimentos e definir a expectativa dos entrevistados têm a respeito do produto;
+    \item entrevistas, que consistem em diálogos direcionadas à um fornecedor de requisitos no formato “pergunta-resposta” com um propósito específico tendo os mesmos objetivos dos questionários;
+    \item observação, que consiste em fazer uma análise externa do comportamento e o ambiente dos indivíduos de vários níveis organizacionais, capturando as necessidades, modo de trabalho e as deficiências de cada atividade relacionada ao projeto; 
+    \item entre outros.
+\end{itemize}
+
+O processo de levantar os requisitos de um projeto é um tanto quanto complexa, pois um escopo mal definido ou um mau entendimento dos usuários quanto às capacidades e limitações do sistema computacional  podem se tornar um grande problema para o projeto como um todo, além da própria volatilidade dos requisitos, que mudam ao longo da execução do mesmo \cite{pressman2016engenharia}.
+
+Em casos onde são utilizados diagramas de atividades para modelar os principais processos aos quais a aplicação deve abranger, o levantamento de requisitos deve identificar quais as funções são necessárias para realizar as atividades destes processos corretamente \cite{wazlawick2013engenharia}. Por este motivo, uma boa prática é que a primeira atividade do levantamento de requisitos seja a modelagem do negócio,através da construção de diagramas de atividades que descrevam detalhadamente os processos do negócio.
+
+\section{Versionamento}
+
+Versionamento ou controle de versão é o uso de ferramentas para realizar o gerenciamento de alterações ou diferentes versões no desenvolvimento de um determinado documento, projeto ou aplicação.
+
+Os sistemas de controle de versão, comumente utilizados no desenvolvimento de \textit{software}, são ferramentas com o objetivo de gerenciar as inúmeras alterações nos documentos produzidos ao longo do processo de desenvolvimento.
+
+De acordo com \cite{murta2006gerencia}, do ponto de vista do desenvolvimento, o gerenciamento de software é dividido em três sistemas principais, que são: controle de modificações, controle de versões e gerenciamento de construção.
+
+Segundo \cite{mason2006pragmatic}, um sistema de controle de versão é basicamente um local para armazenamento de artefatos gerados durante o desenvolvimento de um sistema. Atuando como uma espécie de controle do tempo para a equipe de desenvolvimento, as ferramentas de controle de versão permitem a navegação por múltiplos arquivos de múltiplos autores a qualquer versão anterior.
+
+Segundo \citeonline{araujo2019} as vantagens encontradas nos sistemas que utilizam mecanismos de controle de versão são: 
+ \begin{itemize}
+     \item Controle de histórico: Possibilita o usuário fazer a análise e comparação de versões anteriores do projeto podendo exportá-las e executá-las, podendo inclusive desfazer alterações voltando o documento ao estado em que se identificava nas versões anteriores.
+     \item Suporte a colaboração: Possibilita a identificação de alteração de determinado documento,permitindo ao usuário interessado em alterar o mesmo documento, optar por aguardar a liberação do usuário que está trabalhando atualmente no documento, ou trabalhar de forma paralela, e posteriormente os usuários podem efetuar o \textit{merge} (mesclar informações de dois ou mais documentos a fim de gerar um só).
+    \item Suporte a marcação e resgate de versões estáveis: Alguns sistemas de controle de versão possuem propriedades que identificam versões estáveis, possibilitando através do histórico, selecionar uma versão estável para exportar e utilizar.
+    \item Ramificação de projeto: Possibilita o trabalho por equipes diferentes em um mesmo produto, onde esses ramos posteriormente podem ser unidos ao projeto principal através de uma solicitação ao gerente do sistema de versionamento.
+ \end{itemize}
+
+\newpage
+
+Nos documentos de especificação de software o emprego desses
+mecanismos de gerenciamento de versões é essencial. Os requisitos mudam
+constantemente devido a variados motivos, podendo eles ser desde ao fato de os problemas aos quais se refere um requisito não foram inteiramente definidos, desde uma evolução no entendimento dos desenvolvedores acerca do problema, passando por melhorias em sistemas antigos ou automatização de algum processo manual. Além disso, regras e ambiente técnico também são fatores para uma atualização nos requisitos de software. Dessa forma, requisitos podem ser atualizados, incluídos ou removidos.
+
+Certo de que estes documentos representam determinada funcionalidade ou
+propriedade de um sistema, e impõe grandes responsabilidades de quem for alterá-los, fica necessário o rastreamento das mudanças, por conta disso, opções de acesso a leitura de versões anteriores, para o usuário poder comparar versões, são peças fundamentais nos gerenciadores de requisitos de software. 
+
+\section{Engenharia de Software}
+
+De acordo com \cite{pressman2016engenharia}, a engenharia de software pode ser definida como \say{aplicação de uma abordagem sistemática, disciplinada e quantificável, para desenvolvimento, operação e manutenção do software, isto é a aplicação da engenharia ao software}.
+
+A evolução da complexidade no processo de produção de um software, devido à novos dispositivos, tecnologias e a melhoria nas comunicações e redes trouxe novos problemas para engenheiros e desenvolvedores. Devido estes e outros fatores, houve a necessidade de representar o processo em modelos que tentam se adaptar a essa nova realidade.
+
+\subsection{Modelos de Processo}
+
+Um modelo de processo de software, de acordo com \cite{sommerville2011software}, é uma representação abstrata de um processo de software. Cada modelo de processo representa um processo a partir de uma perspectiva particular, de maneira que proporciona apenas
+informações parciais sobre o processo. O modelo de processo abordado neste sistema será um modelo baseado em métodos ágeis com adaptações devido a ausência de equipe, oferecendo agilidade e uma metodologia indispensáveis aos projetos atuais, de acordo com \cite{beck2001manifesto}.
+
+\subsection{Métodos Ágeis}
+
+Embora os métodos ágeis estejam sendo aplicados a muito tempo, recentemente vem se tornando cada vez mais popular no Brasil devido ao fato de ser uma abordagem simplificada. Entretanto essa simplicidade e aceleração requerem disciplina e organização.
+
+Em 2001, um grupo de 17 autores e representantes de diversas técnicas e metodologias se reuniram com o objetivo de estabelecer um padrão de desenvolvimento de projeto com as técnicas e metodologias existentes na época. O resultado final dessa reunião foi o Manifesto para o Desenvolvimento Ágil de Software \cite{beck2001manifesto}, que definiu um \textit{framework} comum para processos ágeis, trazendo novas ideias e sugestões para a melhoria de processos, técnicas e métodos de desenvolvimento e gestão de projetos de forma ágil.
+
+De acordo com \cite{pressman2016engenharia}, a utilização de métodos ágeis pode trazer benefícios como: 
+\begin{itemize}
+    \item maior satisfação dos clientes;
+    \item melhoria na comunicação e aumento na colaboração entre envolvidos nos projetos;
+    \item melhoria na qualidade do produto;
+    \item menores custos de produção;
+\end{itemize} 
+
+\subsection{Uso de Framework para Desenvolvimento de Aplicações}
+
+Várias definições sobre framework são descritas na literatura, mas segundo \cite{gammapadroes} \say{um framework é um conjunto de classes que cooperam entre si provendo assim um projeto reutiliável para um domínio específico de classes de sistema}
+
+Um \textit{framework} é uma estrutura de suporte definida através da qual outro projeto de software pode ser estruturado e desenvolvido. Um
+\textit{framework} pode incluir programas de suporte, bibliotecas, modelagens de dados, linguagens de script e outros softwares para ajudar a desenvolver e juntar diferentes componentes de um novo projeto. 
+
+Utilizando \textit{frameworks} tem-se como principal vantagem a redução de custos, devido ao fato de já existir uma estrutura definida, podendo assim a etapa de desenvolvimento concentrar-se apenas em implementar as regras específicas do negócio em que o sistema deve atuar. 
+
+Um \textit{framework} ainda proporciona a reutilização de códigos e a fatoração de problemas em aspectos comuns a várias aplicações, permitindo a criação de sistemas com códigos menos frágeis e menos suscetíveis à defeitos. 
