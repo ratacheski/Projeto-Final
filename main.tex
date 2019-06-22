@@ -187,9 +187,9 @@ do grau de Engenheiro de Computação.}
 \imprimircapa
 \imprimirfolhaderosto
 
-\include{fichaCatalografica}
+\include{pre-textuais/fichaCatalografica}
 
-\include{folhaAprovacao}
+\include{pre-textuais/folhaAprovacao}
 
 \begin{dedicatoria}
    \vspace*{\fill}
@@ -236,25 +236,7 @@ contribuirão para a evolução do \abnTeX.
 % RESUMOS
 % ---
 
-% resumo em português
-\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
-\begin{resumo}
- Nos últimos anos com o intenso desenvolvimento de dispositivos eletrônicos para facilitar nosso dia a dia, o consumo de energia elétrica só tem aumentado, e juntamente a esse aumento cresceu-se também o impacto ambiental e econômico causado por esse consumo. Sendo assim a preocupação em se criar medidas para o entendimento e o controle dos impactos é cada dia mais presente. Propõe-se com este trabalho, desenvolvimento de um sistema, para fazer o monitoramento e auxiliar no controle da rede energética da Universidade Federal de Goiás disponibilizando uma interface para apreciação dos dados coletados pelos sistemas de monitoramento da rede energética, fazer o cadastramento em uma base do seu acervo de materiais geradores e transportadores de energia, juntamente com a possibilidade de inserção de dados históricos do consumo através de envio de faturas das unidades consumidoras da Universidade, alimentando o banco de dados do sistema com os dados oficiais da concessionária de energia de faturamento dos meses passados. 
-
- \textbf{Palavras-chaves}: consumo energético. banco de dados. monitoramento de rede energética. sistema de monitoramento.
-\end{resumo}
-
-% resumo em inglês
-\begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-   In recent years with the intense development of electronic devices to facilitate our day to day, electricity consumption has only increased, and along with this increase has also grown the environmental and economic impact caused by such consumption. Therefore, the concern to create measures for the understanding and control of impacts is increasingly present. It is proposed, with this work, the development of a system to monitor and assist in the control of the energy network of the Federal University of Goiás, providing an interface for appreciation of the data collected by the energy grid monitoring systems, of its collection of generating materials and energy carriers, together with the possibility of inserting historical consumption data by sending invoices from the University's consuming units, feeding the system database with the official data of the billing energy utility of past months.
-
-   \vspace{\onelineskip}
- 
-   \noindent 
-   \textbf{Key-words}: energy consumption. database. energy network monitoring. monitoring system.
- \end{otherlanguage*}
-\end{resumo}
+\include{pre-textuais/resumo}
 
 
 % ---
@@ -273,9 +255,9 @@ contribuirão para a evolução do \abnTeX.
 \cleardoublepage
 % ---
 
-\include{abreviaturasESiglas}
+\include{pre-textuais/abreviaturasESiglas}
 
-\include{simbolos}
+\include{pre-textuais/simbolos}
 
 \renewcommand{\listingscaption}{Algoritmo}
 \renewcommand{\listoflistingscaption}{Lista de Códigos Fonte}
@@ -367,40 +349,14 @@ contribuirão para a evolução do \abnTeX.
 % Apêndices
 % ----------------------------------------------------------
 
-\include{apendices}
+\include{pos-textuais/apendices}
 
 
 % ----------------------------------------------------------
 % Anexos
 % ----------------------------------------------------------
 
-% ---
-% Inicia os anexos
-% ---
-\begin{anexosenv}
-
-% Imprime uma página indicando o início dos anexos
-\partanexos
-
-% ---
-\chapter{Morbi ultrices rutrum lorem.}
-% ---
-\lipsum[30]
-
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
-
-\end{anexosenv}
+\include{pos-textuais/anexos}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
