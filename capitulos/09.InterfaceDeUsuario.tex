@@ -65,8 +65,79 @@ O mapa foi construído em cima de um \textit{Web Component} do Polymer fornecido
 \end{figure}
 
 
-\subsection{Cadastro de Medidores}
-
 \subsection{Cadastro de Unidades Consumidoras}
 
+No menu de Unidades Consumidoras podemos visualizar os medidores da concessionária cadastrados na base, descriminados pela junção de seu nome com a número da unidade consumidora do mesmo.
+
+Na listagem de cada unidade, pode-se ver o número do medidor e suas demandas contratadas na primeira coluna, e o endereço completo na segunda coluna. Abaixo temos as ações disponíveis para aquele item, sendo a primeira o \textit{upload} de faturas daquela unidade consumidora, sendo que essa relação será validada no momento do upload, e o segundo ícone a edição do item em si.
+
+Abaixo temos uma imagem da tela de listagem de unidades consumidoras do sistema.
+
+\begin{figure}[H]
+    \centering
+    \caption{Tela de Listagem das Unidades Consumidoras}
+\includegraphics[width=\linewidth]{imagens/side/side-uc-list.png}
+    \caption*{Fonte: Próprio Autor}
+    \label{fig:side-uc-list}
+\end{figure}
+
+Ao criar uma Unidade Consumidora, através do ícone superior da tela ou editar uma através do ícone de edição do item, teremos acesso a tela de edição, onde deverão ser preenchidos os dados e após o preenchimento poderão ser salvos. Além disso é possível na tela de edição de uma unidade consumidora, apagar aquela unidade, onde a nível de banco serão desassociados todos os medidores CCK vinculados àquela unidade. 
+
+\newpage
+
+Abaixo temos uma imagem da tela de edição de unidade consumidora:
+
+\begin{figure}[H]
+    \centering
+    \caption{Tela de Edição das Unidades Consumidoras}
+\includegraphics[width=\linewidth]{imagens/side/side-uc-edit.png}
+    \caption*{Fonte: Próprio Autor}
+    \label{fig:side-uc-edit}
+\end{figure}
+
+\subsection{Cadastro de Medidores}
+
+No menu de Medidores podemos visualizar os medidores da Universidade cadastrados na base através do \textit{Side Synchronizer}, descriminados pela denominação do mesmo.
+
+Na listagem de cada medidor, pode-se ver a unidade consumidora associada à ele, o tipo de Medidor, suas coordenadas geográficas, bem como suas datas de início e fim de leitura. Abaixo temos disponível a ação de edição para aquele item. Para a tela de medidores não é permitido cadastras ou remover itens, pois o mesmo só pode ser feito pelo dispositivo mestre da rede \textit{Modbus}.
+
+Abaixo temos uma imagem da tela de listagem de medidores do sistema.
+
+\begin{figure}[H]
+    \centering
+    \caption{Tela de Listagem dos Medidores CCK}
+\includegraphics[width=0.75\linewidth]{imagens/side/side-medidor-list.png}
+    \caption*{Fonte: Próprio Autor}
+    \label{fig:side-medidor-list}
+\end{figure}
+
+Ao editar um medidor através do ícone de edição do item, teremos acesso a tela de edição, onde deverão ser preenchidos os dados e após o preenchimento poderão ser salvos. A denominação pode ser alterada pois não interfere na comunicação do \textit{Side Synchronizer} com o mestre da rede \textit{Modbus}, pois a mesma é feita utilizando o id do medidor. Por outro lado não é possível apagar aquele medidor ou criar um novo, essa ação deve ser feita pelo Gerenciador da CCK. 
+
+Abaixo temos uma imagem da tela de edição de medidor:
+
+\begin{figure}[H]
+    \centering
+    \caption{Tela de Edição dos Medidores}
+\includegraphics[width=0.75\linewidth]{imagens/side/side-medidor-edit.png}
+    \caption*{Fonte: Próprio Autor}
+    \label{fig:side-medidor-edit}
+\end{figure}
+
+
 \subsection{Visualização de Medições}
+
+No menu de Medições podemos visualizar o gráfico das medições de um medidor da Universidade cadastrados na base através do \textit{Side Synchronizer}. Além disso as medições podem ser filtradas por data inicial e final.
+
+Ao preencher o filtro da tela selecionando um medidor e suas datas o sistema irá buscar na tabela de medições os resultados limitados pelos parâmetros de busca. Após isso será gerado um gráfico com a curva de potência ativa e reativa distribuídos pelo tempo em um intervalo de 15 minutos.
+
+O gráfico é interativo e permite que o usuário expanda ou comprima os eixos para detalhar melhor as leituras, além disso ao posicionar o ponteiro do mouse sobre um ponto as informações detalhadas daquele ponto serão exibidas.
+
+Abaixo temos uma imagem da tela de medições com o gráfico gerado através da seleção de um medidor e um intervalo de data.
+
+\begin{figure}[H]
+    \centering
+    \caption{Tela de Gráfico de Medições}
+\includegraphics[width=\linewidth]{imagens/side/side-medicoes.png}
+    \caption*{Fonte: Próprio Autor}
+    \label{fig:side-medicoes}
+\end{figure}
