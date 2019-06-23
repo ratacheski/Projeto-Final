@@ -6,7 +6,11 @@
 \section{Comunicação}
 % ---
 
-\lipsum[21-22]
+Devido ao sistema dos sensores ser um sistema proprietário e de código fechado, a comunicação direta com os dispositivos foi inviabilizada, sendo assim a requisição de dados teve que partir para o mestre da rede através de uma API SOAP da própria empresa.
+
+Porém essa API trouxe dados mais limitados, possibilitando apenas consultar as leituras de potências ativas e reativas feitas pelos medidores. Essa informação entretando já foi de grande valia por se tratar do principal indicar de consumo. As informações de qualidade energética, como tensão por exemplo, não puderam ser obtidas.
+
+O sincronizador desenvolvido para a comunicação com a API da CCK, possibilitou com que os dados que ficavam restritos ao sistema de visualização da empresa pudessem ser salvos na base de dados do SIDE, de maneira ágil e constante.
 
 % ---
 % segundo capitulo de Resultados
@@ -14,4 +18,7 @@
 \section{Armazenamento}
 % ---
 
-\lipsum[23]
+O desenvolvimento do \textit{SIDE Synchronizer} possibilitou um armazenamento de um grande volume de dados. Desde a sua implantação para obtenção das memórias de massa dos sensores, foram gravados mais de 1.200.000 (um milhão de duzentos mil) registros de medição na base de dados dos 70 medidores cadastrados atualmente na rede. 
+
+Esses dados serão importantes para as análises não só através do próprio SIDE, mas por agora estarem armazenados em uma estrutura de dados, poderão ser acessados por qualquer sistema de análise de dados como o Kibana\footnote{Site do Sistema Kibana: \url{https://www.elastic.co/pt/products/kibana}} ou o PowerBI\footnote{Site da Aplicação Microsoft PowerBI: \url{https://powerbi.microsoft.com/pt-br/}} por exemplo.
+

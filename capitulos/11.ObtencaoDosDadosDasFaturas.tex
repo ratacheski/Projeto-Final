@@ -1,4 +1,10 @@
 \chapter {Obtenção dos Dados das Faturas}
 \label{c:obtencao_dos_dados_das_faturas}
 
-\lipsum[24]
+Assim como a obtenção dos dados dos sensores, os dados históricos das faturas energéticas são dados importantes para análises financeiras, e o desenvolvimento de um sistema que pudesse extrair esses dados e disponibilizá-los para consulta, tornou o acesso às informações mais fácil.
+
+O trabalho de uma extração de um arquivo PDF, se tornaria algo muito custoso para o estudo caso tivesse que ser feito manualmente, e com o desenvolvimento da aplicação \textit{PdfReader}, esse custo pode ser transferido para se dedicar a análise dos dados em si. 
+
+A possibilidade de extrair esses dados para um arquivo externo do tipo CSV cria o cenário onde se pode entregar esses dados para análise sem dar acesso à todo o restante das informações contidas na base de dados do sistema, focando a análise apenas no histórico de consumo da Universidade. Porém caso seja necessário, devido ao fato de as mesmas informações estarem na base do SIDE, pode-se também fazer uma análise juntamente com os dados das medições, tanto para efeito de auditoria, quanto para efeito de projeções.
+
+Caso futuramente, a concessionária de energia forneça uma API para consulta aos dados das faturas, o sistema pode ser adequado para fazer essa extração diretamente das requisições feitas ao serviço da fornecedora. Além disso esse sistema pode ser adequado à outras cobranças, como fornecimento de água por exemplo.

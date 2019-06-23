@@ -10,7 +10,7 @@ Este sistema pode ser executado independente do sistema operacional por se trata
     \caption{Tela Principal do Sistema PdfReader}
 \includegraphics[width=\linewidth]{imagens/pdf-reader.png}
     \caption*{Fonte: Próprio Autor}
-    \label{fig:diagrama-modelo-dados}
+    \label{fig:pdf-reader}
 \end{figure}
 
 \newpage
@@ -20,7 +20,7 @@ Após selecionado o diretório de origem e o de destino do arquivo resultante, a
 
 \begin{listing}[ht]
 
-\label{listing:sidesynchronizer}
+\label{listing:pdfReader}
 \caption{Código Principal \textit{PdfReader}}
 \inputminted[frame=lines,
     firstline=26,
@@ -28,6 +28,6 @@ Após selecionado o diretório de origem e o de destino do arquivo resultante, a
     framesep=5mm, fontsize=\footnotesize, linenos=true, label={App.java}]{java}{codigos/PdfReader/App.java}
 \end{listing}
 
-Inicialmente é criado um arquivo temporário para armazenamento das conversões de pdf para texto puro das faturas, após é inicializado uma \textit{Collection} com todos os arquivos dentro do diretório passado como parâmetro através da variável \textit{path}, e esses arquivos são iterados fazendo inicialmente em cada arquivo a validação se o mesmo é um arquivo com a extensão PDF após isso é feita interpretação da primeira página da fatura onde, dependendo da opção selecionada será carregado o CSV ou o banco com esses dados coletados.
+Inicialmente é criado um arquivo temporário para armazenamento das conversões de PDF para texto puro das faturas, após é inicializado uma \textit{Collection} com todos os arquivos dentro do diretório passado como parâmetro através da variável \textit{path}, e esses arquivos são iterados fazendo inicialmente em cada arquivo a validação se o mesmo é um arquivo com a extensão PDF após isso é feita interpretação da primeira página da fatura onde, dependendo da opção selecionada será carregado o CSV ou o banco com esses dados coletados.
 
 Após a leitura da primeira página o mesmo processo ocorre para a segunda página, e assim sucessivamente até todos os arquivos terem sido lidos, retornando para a tela principal com a mensagem de leitura efetivada com sucesso.r
