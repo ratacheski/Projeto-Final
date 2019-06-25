@@ -27,9 +27,9 @@ Descrito os frameworks utilizados, pode-se agora definir os modos de funcionamen
 
 \subsection{Login}
 
-A tela inicial do sistema é a tela de login, responsável pela autenticação do usuário cadastrado no sistema, gerando uma chave de sessão válida para o mesmo, liberando assim o seu acesso ao sistema.
+A tela inicial do sistema é a tela de login, mostrada na figura \ref{fig:side-login}, sendo responsável pela autenticação do usuário cadastrado no sistema, gerando uma chave de sessão válida para o mesmo, liberando assim o seu acesso ao sistema.
 
-Esta tela permite também a troca da senha atual do usuário, enviando uma nova senha temporária para o endereço de e-mail cadastrado para o mesmo. Abaixo temos uma imagem da tela de login:
+Esta tela permite também a troca da senha atual do usuário, enviando uma nova senha temporária para o endereço de e-mail cadastrado para o mesmo. Abaixo temos uma imagem da tela de login.
 
 \begin{figure}[H]
     \centering
@@ -39,13 +39,12 @@ Esta tela permite também a troca da senha atual do usuário, enviando uma nova 
     \label{fig:side-login}
 \end{figure}
 
-
-Além disso caso não possua acesso ainda, pode ser feito o cadastro do usuário, fornecendo seu nome, e-mail, cpf, e a senha desejada. Este cadastro irá gerar um acesso básico ao sistema que poderá ser controlado pelo administrador do sistema. Abaixo temos uma imagem da tela de cadastro:
+Além disso caso não possua acesso ainda, pode ser feito o cadastro do usuário, fornecendo seu nome, e-mail, cpf, e a senha desejada. Este cadastro irá gerar um acesso básico ao sistema que poderá ser controlado pelo administrador do sistema. Na figura \ref{fig:side-cadastro} temos uma imagem da tela de cadastro.
 
 \begin{figure}[H]
     \centering
     \caption{Tela de Cadastro do SIDE}
-\includegraphics[width=0.7\linewidth]{imagens/side/side-cadastro.png}
+\includegraphics[width=0.65\linewidth]{imagens/side/side-cadastro.png}
     \caption*{Fonte: Próprio Autor}
     \label{fig:side-cadastro}
 \end{figure}
@@ -54,12 +53,12 @@ Além disso caso não possua acesso ainda, pode ser feito o cadastro do usuário
 
 Após autenticado no sistema o usuário tem acesso ao uso do SIDE, onde inicialmente ele verá um mapa com todos os pontos de medição cadastrado no sistema que possuam suas coordenadas geográficas cadastradas. Esses pontos podem ser clicados, fornecendo informações mais detalhadas como consumo atual através da última leitura, denominação, data da última leitura, unidade consumidora vinculada à ele, e o tipo de medidor.
 
-O mapa foi construído em cima de um \textit{Web Component} do Polymer fornecido pela Google para acesso a api do Google Maps. Abaixo temos uma imagem da \textit{home} do sistema.
+O mapa foi construído em cima de um \textit{Web Component} do Polymer fornecido pela Google para acesso a api do Google Maps. Na figura \ref{fig:side-home} temos uma imagem da \textit{home} do sistema.
 
 \begin{figure}[H]
     \centering
     \caption{Tela Principal do SIDE}
-\includegraphics[width=0.7\linewidth]{imagens/side/side-home.png}
+\includegraphics[width=0.65\linewidth]{imagens/side/side-home.png}
     \caption*{Fonte: Próprio Autor}
     \label{fig:side-home}
 \end{figure}
@@ -69,9 +68,7 @@ O mapa foi construído em cima de um \textit{Web Component} do Polymer fornecido
 
 No menu de Unidades Consumidoras podemos visualizar os medidores da concessionária cadastrados na base, descriminados pela junção de seu nome com a número da unidade consumidora do mesmo.
 
-Na listagem de cada unidade, pode-se ver o número do medidor e suas demandas contratadas na primeira coluna, e o endereço completo na segunda coluna. Abaixo temos as ações disponíveis para aquele item, sendo a primeira o \textit{upload} de faturas daquela unidade consumidora, sendo que essa relação será validada no momento do upload, e o segundo ícone a edição do item em si.
-
-Abaixo temos uma imagem da tela de listagem de unidades consumidoras do sistema.
+Na listagem de cada unidade, pode-se ver o número do medidor e suas demandas contratadas na primeira coluna, e o endereço completo na segunda coluna. Na figura \ref{fig:side-uc-list} temos as ações disponíveis para aquele item, sendo a primeira o \textit{upload} de faturas daquela unidade consumidora, onde esta relação será validada no momento do \textit{upload}, e o segundo ícone, mostra a edição do item em si.
 
 \begin{figure}[H]
     \centering
@@ -85,7 +82,7 @@ Ao criar uma Unidade Consumidora, através do ícone superior da tela ou editar 
 
 \newpage
 
-Abaixo temos uma imagem da tela de edição de unidade consumidora:
+Na figura \ref{fig:side-uc-edit} temos uma imagem da tela de edição de unidade consumidora:
 
 \begin{figure}[H]
     \centering
@@ -101,7 +98,7 @@ No menu de Medidores podemos visualizar os medidores da Universidade cadastrados
 
 Na listagem de cada medidor, pode-se ver a unidade consumidora associada à ele, o tipo de Medidor, suas coordenadas geográficas, bem como suas datas de início e fim de leitura. Abaixo temos disponível a ação de edição para aquele item. Para a tela de medidores não é permitido cadastras ou remover itens, pois o mesmo só pode ser feito pelo dispositivo mestre da rede \textit{Modbus}.
 
-Abaixo temos uma imagem da tela de listagem de medidores do sistema.
+Na figura \ref{fig:side-medidor-list} temos uma imagem da tela de listagem de medidores do sistema.
 
 \begin{figure}[H]
     \centering
@@ -113,7 +110,7 @@ Abaixo temos uma imagem da tela de listagem de medidores do sistema.
 
 Ao editar um medidor através do ícone de edição do item, teremos acesso a tela de edição, onde deverão ser preenchidos os dados e após o preenchimento poderão ser salvos. A denominação pode ser alterada pois não interfere na comunicação do \textit{Side Synchronizer} com o mestre da rede \textit{Modbus}, pois a mesma é feita utilizando o id do medidor. Por outro lado não é possível apagar aquele medidor ou criar um novo, essa ação deve ser feita pelo Gerenciador da CCK. 
 
-Abaixo temos uma imagem da tela de edição de medidor:
+Na figura \ref{fig:side-medidor-edit} temos uma imagem da tela de edição de medidor:
 
 \begin{figure}[H]
     \centering
@@ -132,7 +129,7 @@ Ao preencher o filtro da tela selecionando um medidor e suas datas o sistema ir�
 
 O gráfico é interativo e permite que o usuário expanda ou comprima os eixos para detalhar melhor as leituras, além disso ao posicionar o ponteiro do mouse sobre um ponto as informações detalhadas daquele ponto serão exibidas.
 
-Abaixo temos uma imagem da tela de medições com o gráfico gerado através da seleção de um medidor e um intervalo de data.
+Na figura \ref{fig:side-medicoes} temos uma imagem da tela de medições com o gráfico gerado através da seleção de um medidor e um intervalo de data.
 
 \begin{figure}[H]
     \centering

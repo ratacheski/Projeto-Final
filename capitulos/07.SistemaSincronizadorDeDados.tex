@@ -3,7 +3,7 @@
 % ---
 Descrita a estrutura de banco de dados do projeto, bem como a infraestrutura da rede \textit{Modbus} de medição da UFG, pode-se entender agora o modo de funcionamento do Sistema Responsável por alimentar o banco com as informações capturadas dos medidores. Para isso foi desenvolvido uma aplicação na linguagem \textit{node js}, que é acionada pelo \textit{crontabs} de um servidor Linux com o acionamento a cada minuto.
 
-O código do \textit{SIDE Synchronizer} é composto basicamente de dois momentos:
+O código do \textit{SIDE Synchronizer} é composto basicamente de dois momentos, como mostrado no algoritmo \ref{listing:sidesynchronizer}:
 
 \begin{enumerate}
     \item O sistema acessa o Mestre da rede Modbus e requisita a lista de escravos cadastrados, atualizando o banco de dados com as alterações do mesmo.
@@ -13,11 +13,10 @@ O código do \textit{SIDE Synchronizer} é composto basicamente de dois momentos
 Essas duas etapas serão melhor descritas nas sessões \ref{sec:sincronizacao-medidores} e \ref{sec:sincronizacao-medicoes}, porém, por hora, pode-se analisar o código abaixo da classe principal do \textit{SIDE Synchronizer}.
 
 \begin{listing}[ht]
-
-\label{listing:sidesynchronizer}
 \caption{Código Principal \textit{SIDE Synchronizer}}
 \inputminted[frame=lines, 
     framesep=5mm, fontsize=\footnotesize, linenos=true, label={sidesynchronizer.js}]{js}{codigos/sidesynchronizer.js}
+\label{listing:sidesynchronizer}
 \end{listing}
 
 Inicialmente, na linha 4 inicializa-se uma lista de medidores que receberá a listagem do método medidores.sincronizaMedidoresCCK() na linha 6. Após o retorno do método e a população do \textit{array}, faz-se a iteração por ele onde a cada iteração é executado o método medicoes.sincronizaMedicoesCCK(medidor) passando o medidor como parâmetro.
@@ -27,16 +26,12 @@ Após a iteração, na linha 10 se encerra o processo, que em média leva 1,2 se
 
 A seguir serão detalhados os dois métodos que fazem a sincronização dos medidores e suas respectivas medições.
 
-
-
 \section{Sincronização de Medidores}
 \label{sec:sincronizacao-medidores}
 
-Descrito o funcionamento Geral da aplicação, pode-se analisar o código resumido abaixo, da classe responsável pela sincronização inicial dos medidores.
+Descrito o funcionamento Geral da aplicação, pode-se analisar o código resumido abaixo, da classe responsável pela sincronização inicial dos medidores, como descrito no algoritmo \ref{listing:medidores}.
 
 \begin{listing}[ht]
-
-\label{listing:medidores}
 \caption{Código Resumido da Classe de Medidores}
 \inputminted[
     frame=lines, 
@@ -47,22 +42,21 @@ Descrito o funcionamento Geral da aplicação, pode-se analisar o código resumi
     firstline=26, 
     lastline=58
     ]{js}{codigos/medidores.js}
+\label{listing:medidores}
 \end{listing}
 
 O método sincronizaMedidoresCCK faz inicialmente uma listagem de todos os medidores cadastrados na rede e os armazena na variável medidoresCCK, onde na linha 38 inicializa-se uma lista de retornos da consulta que será populada com os medidores cadastrados na rede \textit{Modbus}. Na linha 40 é feita uma requisição http padrão na  Após o retorno do método e a população do \textit{array}, faz-se a iteração por ele onde a cada iteração é executado o método medicoes.sincronizaMedicoesCCK(medidor) passando o medidor como parâmetro. 
 
-Após a listagem, é feita no servidor CCK uma outra validação, onde ma linha 29 após passar os medidores se obtém para cada um a data da última e da primeira leitura que o dispositivo fez, atualizando assim mais uma vez a lista meddidoresCCK. 
+Após a listagem, é feita no servidor CCK uma outra validação, onde ma linha 29 após passar os medidores se obtém para cada um a data da última e da primeira leitura que o dispositivo fez, atualizando assim mais uma vez a lista medidoresCCK. 
 
 Após o preenchimento é buscado no banco de dados os medidores já registrados e feito o cadastro caso não existam na base, e atualização da denominação, e datas de primeira e ultima leitura caso já existam na base. Ao final é retornado a lista de medidores atualizada.
 
 \section{Sincronização de Medições}
 \label{sec:sincronizacao-medicoes}
 
-Após o retorno da sincronização dos medidores fornecer a lista atualizada de medidores, pode-se iterar essa lista e para cada medidor chamar a sincronização de medições exibida abaixo.
+Após o retorno da sincronização dos medidores fornecer a lista atualizada de medidores, pode-se iterar essa lista chamando-se, para cada medidor, a sincronização de medições exibida no algoritmo \ref{listing:medicoes}.
 
 \begin{listing}[ht]
-
-\label{listing:medicoes}
 \caption{Código Resumido da Classe de Medições}
 \inputminted[
     frame=lines, 
@@ -73,6 +67,7 @@ Após o retorno da sincronização dos medidores fornecer a lista atualizada de 
     firstline=19, 
     lastline=32
     ]{js}{codigos/medicoes.js}
+\label{listing:medicoes}
 \end{listing}
 
 \newpage

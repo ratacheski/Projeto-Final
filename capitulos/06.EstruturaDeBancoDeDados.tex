@@ -1,9 +1,9 @@
 \chapter{Estrutura de Banco de Dados}
 \label{c:estrutura_de_banco_de_dados}
 % ---
-Descrito o Sistema de infraestrutura da rede, é necessário que os dados dos medidores sejam armazenados para possibilitar consultas futuras. Para isso foi desenvolvida uma estrutura de dados onde pode-se armazenar os dados dos medidores e de suas respectivas medições.Além disso, outro requisito do sistema era que os dados referente às unidades consumidoras pudessem ser armazenados, bem como os dados das suas faturas geradas pela concessionária de energia, com os valores oficiais de medição e cobrança.
+Após da descrição do Sistema de infraestrutura da rede feita no capítulo anterior, é necessário que os dados dos medidores sejam armazenados para possibilitar consultas futuras. Para isso foi desenvolvida uma estrutura de dados onde pode-se armazenar os dados dos medidores e de suas respectivas medições.Além disso, outro requisito do sistema era que os dados referente às unidades consumidoras pudessem ser armazenados, bem como os dados das suas faturas geradas pela concessionária de energia, com os valores oficiais de medição e cobrança.
 
-Abaixo pode-se observar o layout do modelo de dados com as entidades principais do projeto e seus atributos, bem como suas relações.
+Na figura \ref{fig:diagrama-modelo-dados} pode-se observar o layout do modelo de dados com as entidades principais do projeto e seus atributos, bem como suas relações.
 
 \begin{figure}[H]
     \centering
@@ -131,7 +131,7 @@ Nesta tabela são armazenados os seguintes campos:
 
 \subsection{Tabela dos Dados da Fatura}
 \label{sub:tabela-dado-fatura}
-A tabela onde é feito o cadastro dos dados específicos da fatura adquiridos pela interpretação da tabela da segunda página das faturas como a do exemplo da imagem abaixo é a tabela  \textbf{sideufg\_dado\_fatura} onde os registros são identificados através do campo \textbf{id} do tipo UUID.
+A tabela onde é feito o cadastro dos dados específicos da fatura adquiridos pela interpretação da tabela da segunda página das faturas como a do exemplo da figura \ref{fig:modelo-tabela-dados-fatura} é a tabela  \textbf{sideufg\_dado\_fatura} onde os registros são identificados através do campo \textbf{id} do tipo UUID.
 
 \begin{figure}[H]
     \centering

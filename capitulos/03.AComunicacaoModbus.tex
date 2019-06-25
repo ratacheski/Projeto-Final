@@ -17,13 +17,8 @@ Já o protocolo TCP, como o próprio nome sugere, utiliza TCP como camada de com
 
 \section{Formato de uma mensagem \textit{Modbus}}
 
-A estrutura de uma mensagem transmitida com base 
-no protocolo \textit{Modbus} RTU é definida 
-na imagem a seguir, porém podemos utilizar a mesma 
-como base para o modelo ASCII 
-diferenciando-se por um caractere inicial ":" (ASCII 0x3Ah) 
-e um CRLF (\textit{Carriage Return and Line Feed}) 
-representado em ASCII por 0x0Dh + 0x0Ah ao final da mensagem:
+A estrutura de uma mensagem transmitida com base no protocolo \textit{Modbus} RTU é definida na figura \ref{fig:Modbus}, porém podemos utilizar a mesma como base para o modelo ASCII diferenciando-se por um caractere inicial ":" (ASCII 0x3Ah) 
+e um CRLF (\textit{Carriage Return and Line Feed}) representado em ASCII por 0x0Dh + 0x0Ah ao final da mensagem:
 \newline
 
 \begin{figure}[h]
@@ -31,6 +26,7 @@ representado em ASCII por 0x0Dh + 0x0Ah ao final da mensagem:
 \centering
 \includegraphics[width=1.0\textwidth,height=1.0\textheight,keepaspectratio]{imagens/mensagem-modbus.png}
 \caption*{Fonte: Próprio Autor}
+\label{fig:Modbus}
 \end{figure}
 
 \subsection{Endereçamento}
@@ -39,7 +35,7 @@ No caso da comunicação serial a mensagem conterá inicialmente 1 byte com o en
 
 \subsection{Função}
 
-Neste campo de 1 byte o dispositivo mestre indicará qual o tipo de serviço ou função que será solicitada ao escravo. No protocolo \textit{Modbus}, cada função é utilizada para acessar um tipo específico de dado. Algumas dessas funções estão descritas na tabela abaixo para efeito de exemplificação.
+Neste campo de 1 byte o dispositivo mestre indicará qual o tipo de serviço ou função que será solicitada ao escravo. No protocolo \textit{Modbus}, cada função é utilizada para acessar um tipo específico de dado. Algumas dessas funções estão descritas na tabela \ref{tab:tabela_funcoes_modbus} para efeito de exemplificação.
 
 
 \begin{table}[H]
@@ -48,7 +44,7 @@ Neste campo de 1 byte o dispositivo mestre indicará qual o tipo de serviço ou 
 \label{tab:tabela_funcoes_modbus}
 \begin{tabular}{| l | m{11cm} |}
 \hline
-\textbf{Código da Função} & \textbf{Descrição} \\ [10pt]
+\textbf{Código da Função} & {\center \textbf{Descrição}} \\ [10pt]
 \hline
 0x01 & Leitura de bloco de bits do tipo coil (saída discreta) \\ 
 \hline
