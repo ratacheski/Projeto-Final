@@ -32,8 +32,8 @@
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	%twoside,			% para impressão em verso e anverso. Oposto a
-	oneside,
+	twoside,			% para impressão em verso e anverso. Oposto a
+	%oneside,
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -86,6 +86,7 @@
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
+\usepackage{customizacoes}
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
@@ -110,11 +111,11 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Desenvolvimento de Sistema para gerenciar e auxiliar na tomada de decisão envolvendo consumo de energia elétrica}
+\titulo{Desenvolvimento de Sistema para Gerenciar e Auxiliar na Tomada de Decisão Envolvendo Consumo de Energia Elétrica}
 \autor{Rafael Ratacheski de Sousa Raulino}
 \local{Goiânia}
 \data{2019}
-\orientador{Marcelo Stehling de Castro}
+\orientador{Prof. Dr. Marcelo Stehling de Castro}
 \instituicao{%
  Universidade Federal de Goiás - UFG
   \par
@@ -186,11 +187,24 @@ do grau de Engenheiro de Computação.}
 % \pretextual
 
 \imprimircapa
+
+\includepdf[]{pre-textuais/termo}
+
 \imprimirfolhaderosto
 
-\include{pre-textuais/fichaCatalografica}
+% ----------------------------------------------------------
+% Alterar para Ficha Catalográfica Gerada pelo sistema da UFG
+% \includepdf[]{pre-textuais/ficha-catalografica}
+% ----------------------------------------------------------
+%\include{pre-textuais/fichaCatalografica}
+\includepdf[]{pre-textuais/ficha-catalografica}
 
-\include{pre-textuais/folhaAprovacao}
+% ----------------------------------------------------------
+% Alterar para Folha de aprovação Final Escaneada em PDF
+% \includepdf[pages=1-2]{pre-textuais/Ata-PFC2}
+% ----------------------------------------------------------
+%\include{pre-textuais/folhaAprovacao.tex}
+\includepdf[pages=1-2]{pre-textuais/Ata-PFC2}
 
 \include{pre-textuais/dedicatoria}
 
